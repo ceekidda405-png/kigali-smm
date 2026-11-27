@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kigali SMM - Social Media Services</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#0b0b0b;color:#eee;
+ font-family:Arial,sans-serif;
+}
+header{
+ background:#111;padding:18px 20px;
+ border-bottom:1px solid #292929;
+ display:flex;justify-content:space-between;
+ align-items:center;
+}
+.logo{font-size:25px;font-weight:bold;color:#fff}
+.logo span{color:#00c78b}
+.container{max-width:650px;margin:25px auto;padding:15px}
+.welcome{font-size:25px;margin-bottom:8px}
+.subtitle{color:#999;margin-bottom:25px}
+.card{
+ background:#151515;border:1px solid #292929;
+ border-radius:13px;padding:20px;margin-bottom:18px;
+}
+h3{margin-top:0}
+label{display:block;margin:17px 0 8px}
+input,select,textarea{
+ width:100%;padding:15px;border-radius:9px;
+ border:1px solid #383838;background:#101010;
+ color:white;font-size:15px;
+}
+button{
+ width:100%;padding:16px;background:#008b62;
+ color:white;border:0;border-radius:30px;
+ font-size:17px;font-weight:bold;margin-top:20px;
+}
+button:active{background:#006b4b}
+.services{
+ display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+.service{
+ background:#101010;border:1px solid #303030;
+ border-radius:10px;padding:17px;text-align:center;
+}
+.service span{font-size:27px;display:block;margin-bottom:9px}
+.notice{color:#aaa;font-size:13px;line-height:1.6}
+footer{text-align:center;color:#777;padding:25px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">KIGALI <span>SMM</span></div>
+ <div>☰</div>
+</header>
+
+<div class="container">
+
+ <h2 class="welcome">Welcome to Kigali SMM 🚀</h2>
+ <p class="subtitle">Your social media promotion platform.</p>
+
+ <div class="card">
+  <h3>Our Services</h3>
+  <div class="services">
+   <div class="service"><span>▶️</span>YouTube</div>
+   <div class="service"><span>📸</span>Instagram</div>
+   <div class="service"><span>🎵</span>TikTok</div>
+   <div class="service"><span>📘</span>Facebook</div>
+   <div class="service"><span>🔍</span>SEO</div>
+   <div class="service"><span>📈</span>Marketing</div>
+  </div>
+ </div>
+
+ <div class="card">
+  <h3>Place an Order</h3>
+
+  <form id="orderForm">
+   <label>Your Name</label>
+   <input id="customer" required placeholder="Enter your name">
+
+   <label>Email Address</label>
+   <input id="email" type="email" required placeholder="Your email">
+
+   <label>Category</label>
+   <select id="category">
+    <option>YouTube</option>
+    <option>Instagram</option>
+    <option>TikTok</option>
+    <option>Facebook</option>
+    <option>SEO</option>
+   </select>
+
+   <label>Service</label>
+   <select id="service">
+    <option>Video promotion</option>
+    <option>Channel promotion</option>
+    <option>Content promotion</option>
+    <option>SEO audit</option>
+   </select>
+
+   <label>Video or Profile Link</label>
+   <input id="link" type="url" required placeholder="Paste your link">
+
+   <label>Quantity / Request</label>
+   <input id="quantity" required placeholder="e.g. 1000">
+
+   <label>Additional Information</label>
+   <textarea id="notes" rows="3" placeholder="Tell us more"></textarea>
+
+   <button type="submit">Submit Order</button>
+  </form>
+  <p class="notice">Submitting an order sends a request for review. Payment and service delivery are arranged separately.</p>
+ </div>
+
+ <div class="card">
+  <h3>Why Choose Kigali SMM?</h3>
+  <p>✓ Personal customer support</p>
+  <p>✓ Easy ordering</p>
+  <p>✓ Social media promotion</p>
+  <p>✓ Order assistance</p>
+ </div>
+
+</div>
+
+<footer>
+ © 2026 Kigali SMM. All Rights Reserved.
+</footer>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const order={
+  customer:document.getElementById("customer").value,
+  email:document.getElementById("email").value,
+  category:document.getElementById("category").value,
+  service:document.getElementById("service").value,
+  link:document.getElementById("link").value,
+  quantity:document.getElementById("quantity").value
+ };
+ alert("Thank you "+order.customer+"! Your order request form works. Email and order storage will be connected in the next development step.");
+});
+</script>
+
+</body>
+</html>
